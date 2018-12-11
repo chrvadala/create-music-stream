@@ -1,6 +1,13 @@
 # create-music-stream
 
-Creates a PCM 16 bit Little Endian Stream from a mp3 file or youtube video
+Creates a PCM 16 bit Little Endian Stream from a **mp3 file** or **youtube video**
+
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard.js-brightgreen.svg)](https://standardjs.com)
+[![Build Status](https://travis-ci.org/chrvadala/create-music-stream.svg?branch=master)](https://travis-ci.org/chrvadala/create-music-stream)
+[![Coverage Status](https://coveralls.io/repos/github/chrvadala/create-music-stream/badge.svg?branch=master)](https://coveralls.io/github/chrvadala/create-music-stream?branch=master)
+[![npm](https://img.shields.io/npm/v/create-music-stream.svg?maxAge=2592000?style=plastic)](https://www.npmjs.com/package/create-music-stream)
+[![Downloads](https://img.shields.io/npm/dm/create-music-stream.svg)](https://www.npmjs.com/package/create-music-stream)
+[![Donate](https://img.shields.io/badge/donate-PayPal-green.svg)](https://www.paypal.me/chrvadala/25)
 
 ## Mp3 local file
 ```javascript
@@ -22,4 +29,9 @@ createMusicStream('./track.mp3')
 
 ## FAQ
 - If the YouTube player doesn't work read this article [What if it stops working?](https://github.com/fent/node-ytdl-core#what-if-it-stops-working)
-- If the ffmpeg binary is not found you might force the path with `require('fluent-ffmpeg').setFfmpegPath('/Users/chri/Bin/ffmpeg')`
+- If the ffmpeg binary is not found you might force the path with
+```javascript
+require('fluent-ffmpeg')
+  .setFfmpegPath('/Users/chri/Bin/ffmpeg')
+```
+
