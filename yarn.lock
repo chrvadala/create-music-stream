@@ -99,10 +99,10 @@ lodash@^4.17.10:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
 
-m3u8stream@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/m3u8stream/-/m3u8stream-0.6.0.tgz#a78378d491b66a1207e206f368a9259b074a0c7b"
-  integrity sha512-h78ollIa7zeq0nzx1+wI/EH0soUpe9A7sC6zw/+/tuRwYdIXedOytvI69+6eP/FU4Ph0cT6kQsw73j5tKXIbgg==
+m3u8stream@^0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/m3u8stream/-/m3u8stream-0.6.2.tgz#c2c62ddce88156d80378dd59be010c8b8e9d120b"
+  integrity sha512-WsuM2bd5pPN80xvfrB+1DZqr4M7+kJl8byi6+ZCy6cmVjEiHhmr/desN53Ngsa6Hs13kYumeVgT4wL0oIJ+v6g==
   dependencies:
     miniget "^1.4.0"
     sax "^1.2.4"
@@ -226,12 +226,12 @@ xtend@~4.0.1:
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
   integrity sha1-pcbVMr5lbiPbgg77lDofBJmNY68=
 
-ytdl-core@^0.28.0:
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/ytdl-core/-/ytdl-core-0.28.0.tgz#5f1ed2c9071f13c9c55e6e7187941f4ed32a2efe"
-  integrity sha512-pk1nd0MPZLyMOENUOCFLBJ/m59XFqSWPzSY2UhdG7PHBwYtROAY5QRLoYEG0V21h7i3KUeHbnFq8czio5gPKYA==
+ytdl-core@^0.28.1:
+  version "0.28.1"
+  resolved "https://registry.yarnpkg.com/ytdl-core/-/ytdl-core-0.28.1.tgz#adb236e9f28d49dcf2c1327c615f3ae498799a6c"
+  integrity sha512-HByrbZTLLizyuvzsvGXMT3H4jVhYECg7+qTlEJ3jOr82h8lFuSzugAKx3bs0K5P4TKB4HQlAhOM8ymqimf+RcA==
   dependencies:
     html-entities "^1.1.3"
-    m3u8stream "^0.6.0"
+    m3u8stream "^0.6.2"
     miniget "^1.4.0"
     sax "^1.1.3"
