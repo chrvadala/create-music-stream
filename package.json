@@ -1,6 +1,6 @@
 {
   "name": "create-music-stream",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "src/index.js",
   "repository": "https://github.com/chrvadala/create-music-stream.git",
   "author": "chr.vadala",
