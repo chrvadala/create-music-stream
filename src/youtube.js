@@ -5,7 +5,11 @@ module.exports = {
   isYoutube(input) {
     return typeof input === "string" && (ytdl.validateURL(input) || ytdl.validateID(input))
   },
-
+  printProgress(progress)  {
+    process.stdout.clearLine();
+    process.stdout.cursorTo(0);
+    process.stdout.write(progress);
+  },
   getYoutubeStream(videoID, log) {
     const youtubeDownloader = ytdl(videoID, {
       quality: 'highestaudio',
@@ -21,6 +25,6 @@ module.exports = {
         '-ar 44100',
       ])
 
-      .on('progress', p => log(`Downloaded ${p.targetSize}kb`))
+      .on('progress', p => this.printProgress(`Downloaded ${p.targetSize}kb`))
   }
 }
