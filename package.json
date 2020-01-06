@@ -12,6 +12,6 @@
     "fluent-ffmpeg": "^2.1.2",
     "lame": "^1.2.4",
     "progress-stream": "^2.0.0",
-    "ytdl-core": "^0.28.1"
+    "ytdl-core": "^1.0.6"
   }
 }
