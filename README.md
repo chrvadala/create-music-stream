@@ -24,9 +24,15 @@ createMusicStream('./track.mp3')
  createMusicStream('https://www.youtube.com/watch?v=fz4MzJTeL0c')
    .pipe(new Speaker())
  ```
+## Dependencies
+```sh
+sudo apt-get install libasound2-dev ffmpeg
+```
+
 
 ## FAQ
 - If the YouTube player doesn't work read this article [What if it stops working?](https://github.com/fent/node-ytdl-core#what-if-it-stops-working)
+- If `speaker` dependency is unable to build read this doc [Audio Backend Selection](https://www.npmjs.com/package/speaker#audio-backend-selection)
 - If the ffmpeg binary is not found you might force the path with the following code
 ```javascript
 require('fluent-ffmpeg')
