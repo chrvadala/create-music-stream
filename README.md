@@ -41,3 +41,4 @@ require('fluent-ffmpeg')
 
 ## Contributors
 - [chrvadala](https://github.com/chrvadala) (author)
+- [cihadturhan](https://github.com/cihadturhan)
