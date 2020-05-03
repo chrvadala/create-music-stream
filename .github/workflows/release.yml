@@ -16,13 +16,14 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 10
+          registry-url: 'https://registry.npmjs.org'
       - name: Setup OS deps
         run: |
           sudo apt-get update
           sudo apt-get install -y libasound2-dev ffmpeg
       - run: yarn
       - run: yarn ci
-      - run: npm publish
+      - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
   gh-release:
