@@ -7,7 +7,7 @@ const { Writable } = require('stream')
 test.each([
   ['local_file', path.join(__dirname, '../track.mp3')],
   ['youtube', 'https://www.youtube.com/watch?v=QohH89Eu5iM']
-])('load stream from %s (%s)', (sourceType, source, done) => {
+])('load stream from %s', (sourceType, source, done) => {
   const logFunc = jest.fn()
   let receivedBytes = 0
   const stream = createMusicStream(source, logFunc)
