@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`load stream from local_file (/media/psf/WebDev/create-music-stream/track.mp3) 1`] = `2833920`;
+
+exports[`load stream from youtube (https://www.youtube.com/watch?v=QohH89Eu5iM) 1`] = `1055868`;

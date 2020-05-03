@@ -5,7 +5,13 @@
   "repository": "https://github.com/chrvadala/create-music-stream.git",
   "author": "chr.vadala",
   "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
   "devDependencies": {
+    "@jest/globals": "^25.5.2",
+    "jest": "^25.5.4",
     "speaker": "^0.4.1"
   },
   "dependencies": {
