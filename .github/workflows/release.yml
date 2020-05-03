@@ -1,0 +1,39 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - v*
+
+env:
+  RUNNER_TEMP: /tmp
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10
+      - name: Setup OS deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libasound2-dev ffmpeg
+      - run: yarn
+      - run: yarn ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+  gh-release:
+    runs-on: ubuntu-18.04
+    needs: [publish-npm]
+    steps:
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: Release ${{ github.ref }}
