@@ -20,6 +20,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
+      - apt-get install libasound2-dev ffmpeg
       - run: yarn
       - run: yarn ci
       - name: Publish Coveralls
