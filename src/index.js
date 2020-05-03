@@ -1,4 +1,3 @@
-const fs = require('fs')
 const mp3 = require('./mp3')
 const youtube = require('./youtube')
 

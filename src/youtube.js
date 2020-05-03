@@ -2,11 +2,11 @@ const ytdl = require('ytdl-core')
 const ffmpeg = require('fluent-ffmpeg')
 
 module.exports = {
-  isYoutube(input) {
-    return typeof input === "string" && (ytdl.validateURL(input) || ytdl.validateID(input))
+  isYoutube (input) {
+    return typeof input === 'string' && (ytdl.validateURL(input) || ytdl.validateID(input))
   },
 
-  getYoutubeStream(videoID, log) {
+  getYoutubeStream (videoID, log) {
     const youtubeDownloader = ytdl(videoID, {
       quality: 'highestaudio',
       filter: 'audioonly'
@@ -18,7 +18,7 @@ module.exports = {
         '-acodec pcm_s16le',
         '-vn',
         '-ac 2',
-        '-ar 44100',
+        '-ar 44100'
       ])
 
       .on('progress', p => log(`Downloaded ${p.targetSize}kb`))

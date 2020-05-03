@@ -7,12 +7,14 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "standard": "standard"
   },
   "devDependencies": {
     "@jest/globals": "^25.5.2",
     "jest": "^25.5.4",
-    "speaker": "^0.4.1"
+    "speaker": "^0.4.1",
+    "standard": "^14.3.3"
   },
   "dependencies": {
     "fluent-ffmpeg": "^2.1.2",
