@@ -44,7 +44,7 @@ jobs:
       - run: yarn publish ./package
         env:
           VERSION: ${{ fromJSON(needs.build.outputs.version) }}
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   tag-release:
     runs-on: ubuntu-18.04
