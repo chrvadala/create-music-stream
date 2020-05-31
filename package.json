@@ -10,7 +10,7 @@
     "coverage": "jest --coverage",
     "standard": "standard",
     "ci": "npm-run-all standard coverage",
-    "preversion": "npm-run-all standard test"
+    "build": "exit 0"
   },
   "devDependencies": {
     "@jest/globals": "^25.5.2",
