@@ -46,6 +46,7 @@ createMusicStream('./track.mp3', console.log)
 ## Changelog
 - **1.0** - First public version
 - **1.1** - Adds tests, Adds standard.js, Enables gh-actions, Upgrades deps
+- **1.2** - Upgrades deps
 
 ## FAQ
 - If the YouTube player doesn't work read this article [What if it stops working?](https://github.com/fent/node-ytdl-core#what-if-it-stops-working)

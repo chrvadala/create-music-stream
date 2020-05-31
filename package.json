@@ -13,8 +13,8 @@
     "build": "exit 0"
   },
   "devDependencies": {
-    "@jest/globals": "^25.5.2",
-    "jest": "^25.5.4",
+    "@jest/globals": "^26.0.1",
+    "jest": "^26.0.1",
     "npm-run-all": "^4.1.5",
     "speaker": "^0.4.1",
     "standard": "^14.3.3"
@@ -23,6 +23,6 @@
     "fluent-ffmpeg": "^2.1.2",
     "lame": "^1.2.4",
     "progress-stream": "^2.0.0",
-    "ytdl-core": "^2.1.1"
+    "ytdl-core": "^2.1.5"
   }
 }
