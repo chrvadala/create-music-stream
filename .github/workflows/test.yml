@@ -4,9 +4,6 @@ on:
   - push
   - pull_request
 
-env:
-  RUNNER_TEMP: /tmp
-
 jobs:
   build:
     strategy:
@@ -16,15 +13,16 @@ jobs:
     name: Test Nodejs v${{ matrix.node }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node }}
       - name: Setup OS deps
         run: |
           sudo apt-get update
           sudo apt-get install -y libasound2-dev ffmpeg
-      - run: yarn
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+      - run: yarn install
+      - run: yarn build
       - run: yarn ci
       - name: Publish Coveralls
         uses: coverallsapp/github-action@v1.1.1
@@ -38,8 +36,8 @@ jobs:
     needs: build
     runs-on: ubuntu-18.04
     steps:
-    - name: Coveralls Finished
-      uses: coverallsapp/github-action@v1.1.1
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        parallel-finished: true
+      - name: Coveralls Finished
+        uses: coverallsapp/github-action@v1.1.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          parallel-finished: true
