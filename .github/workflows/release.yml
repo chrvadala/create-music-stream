@@ -36,8 +36,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://npm.pkg.github.com/
-          scope: chrvadala
       - uses: actions/download-artifact@v2
         with:
           name: artifact
