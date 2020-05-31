@@ -12,9 +12,9 @@ jobs:
       version: ${{ env.VERSION }}
     steps:
       - name: Setup OS deps
-          run: |
-            sudo apt-get update
-            sudo apt-get install -y libasound2-dev ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libasound2-dev ffmpeg
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
